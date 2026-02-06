@@ -1,12 +1,21 @@
 /*
-We have a shopping cart represented by an array of items. Each item has a price and a quantity.
+We have a shopping cart represented by an array of items.
+Each item has a price and a quantity.
 
-Instruction
-Create a function named calculateTotal that receives an array of item objects. Each object has `price` and `quantity`. Return the total cost of the cart.
+> Instruction
+- Create a function named calculateTotal that receives an array of item objects. 
+- Each object has `price` and `quantity`. 
+- Return the total cost of the cart.
 */
 
 const calculateTotal = function (cart) {
-  // Place your solution here
+  let total = 0;
+  for ( i = 0; i < cart.length; i++ ) {
+    let subTotal = cart[i].price * cart[i].quantity;
+    total += subTotal;
+    
+  }
+  return total;
 };
 
 const myCart = [
