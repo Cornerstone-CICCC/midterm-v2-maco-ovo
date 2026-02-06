@@ -1,12 +1,23 @@
 /*
-In this exercise, we need to turn a full name or phrase into its initials.
+- In this exercise, we need to turn a full name or phrase into its initials.
 
-Instruction
-Create a function named getInitials that receives a string of words. It should return a new string containing the first letter of each word, capitalized.
+> Instruction
+Create a function named getInitials that receives a string of words. 
+It should return a new string containing the first letter of each word, capitalized.
 */
 
 const getInitials = function (name) {
   // Place your solution here
+  let arr = name
+    .trim()
+    .split(" ")
+    .filter(item => item != "")
+  
+  let initials = "";
+  for (const i of arr){
+    initials += i[0].toUpperCase();
+  }
+  return initials
 };
 
 console.log(getInitials("World Wide Web")); // "WWW"
