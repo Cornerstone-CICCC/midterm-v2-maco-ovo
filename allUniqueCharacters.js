@@ -2,11 +2,10 @@
 
     Suppose you have a string `s`.
 
-    You are to write a function, allUniqueCharacters, that accepts a string and 
-    returns `true` if the string has all unique characters, and `false` otherwise.
+    - You are to write a function, allUniqueCharacters, that accepts a string and 
+    - returns `true` if the string has all unique characters, and `false` otherwise.
 
-    * Output:   should be a boolean value `true` if the string has all unique characters,
-                and `false` otherwise.
+    * Output:   should be a boolean value `true` if the string has all unique characters, and `false` otherwise.
     * Input:    a single string `s`.
     * 
     * 
@@ -25,7 +24,15 @@
 
 function allUniqueCharacters(s) {
   //Place your solution here:
-  //return false;
+  let letters = "";
+  for( const i of s ){
+    if( letters.includes(i) ){
+      return false
+    } else {
+      letters += i;
+    }
+  }
+  return true
 }
 
 // Example usage:
