@@ -2,8 +2,8 @@
 
     Suppose you have two strings `s` and `t`.
 
-    You are to write a function, isAnagram, that accepts two strings and 
-    returns `true` if `t` is an anagram of `s`, and `false` otherwise.
+    - You are to write a function, isAnagram, that accepts two strings and 
+    - returns `true` if `t` is an anagram of `s`, and `false` otherwise.
     An Anagram is a word or phrase formed by rearranging the letters of a 
     different word or phrase, typically using all the original letters 
     exactly once.
@@ -29,7 +29,13 @@
 
 function isAnagram(s, t) {
     //Place your solution here: 
-    //return false; 
+
+    if (s.length !== t.length) return false;
+
+    const sortedS = s.split("").sort().join("")
+    const sortedT = t.split("").sort().join("")
+     
+    return sortedS === sortedT
 
 }
 
