@@ -1,7 +1,8 @@
 /*
-We have a grid with multiple hidden treasures marked as 'X'. We need a report on how many there are and exactly where they are.
+We have a grid with multiple hidden treasures marked as 'X'. 
+We need a report on how many there are and exactly where they are.
 
-Instruction
+> Instruction
 Create a function named treasureMap that receives an array of arrays (grid). 
 It must return an object with this structure:
 {
@@ -11,7 +12,19 @@ It must return an object with this structure:
 */
 
 const treasureMap = function (grid) {
-  // Place your solution here
+  let coordinates = []; 
+  for ( let y = 0; y < grid.length; y++ ){
+    for ( let x = 0; x < grid[y].length; x++ ){
+      if ( grid[y][x] === "X" ){
+        coordinates.push([x,y]);
+      }
+    }
+  }
+  
+  let treasureCount = coordinates.length;
+  
+  return { treasureCount, coordinates };
+
 };
 
 const map1 = [
